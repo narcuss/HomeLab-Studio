@@ -7,8 +7,7 @@
     <title>HomeLab Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="script.js"></script>
-    <link rel="icon" href="film.png">
+    <link rel="icon" href="favicon.ico">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/410f4fbc58.js" crossorigin="anonymous"></script>
@@ -18,51 +17,85 @@
 </head>
 
 <body>
-    <div class="background-image" id="HOME">
-        <img src="images/black.png" id="img-bg">
-        <div class="navbar" id="navbar">
-            <a class="image-button" href="#HOME"><img id="logo" src="images/film.png" alt="logo">HomeLab Studio</a>
-            <div class="navbar-links">
-                <div class="dropdown">
-                    <button class="dropbtn">HomeLab
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#HomeLab Movie">HomeLab Movie</a>
-                        <a href="#HomeLab Music">HomeLab Music</a>
-                        <a href="#HomeLab Art">HomeLab Art</a>
-                    </div>
+
+    <!-- FOOTER -->
+    <div class="navbar" id="navbar">
+        <a class="image-button" href="#HOME"><img id="logo" src="images/film.png" alt="logo">HomeLab Studio</a>
+        <div class="navbar-links">
+            <div class="dropdown">
+                <button class="dropbtn">HomeLab
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#HomeLab Movie">HomeLab Movie</a>
+                    <a href="#HomeLab Music">HomeLab Music</a>
+                    <a href="#HomeLab Gallery">HomeLab Gallery</a>
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn">Productions
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#movies">Movies</a>
-                        <a href="#music">Music</a>
-                        <a href="#art">Art</a>
-                    </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Productions
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-contentP">
+                    <a href="#movies">Movies</a>
+                    <a href="#music">Music</a>
+                    <a href="#gallery">Gallery</a>
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn">About
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#company">Company</a>
-                        <a href="#team">Team</a>
-                        <a href="#career">Careers</a>
-                    </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">About
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#company">Company</a>
+                    <a href="#team">Team</a>
+                    <a href="#career">Careers</a>
                 </div>
-                <a href="#contact">Contact Us</a>
+            </div>
+            <a href="#contact" class="contact">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-slide">
+                <img src="images/HomeStudio.png" alt="Image 1">
+                <div class="carousel-text">
+                    <h1>Dive into a vibrant world of creativity.</h1>
+                    <h3>Explore our collection of digital media, music and art.</h3>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/mini.png" alt="Image 2">
+                <div class="carousel-text">
+                    <h1>Visual stories that entertain, inspire, and captivate viewers.</h1>
+                    <button class="carousel-button" type="button">Watch Movies</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/black.png" alt="Image 3">
+                <div class="carousel-text">
+                    <h1>Universal rhythms and melodies that move the soul.</h1>
+                    <button class="carousel-button" type="button">Play Music</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/blue.png" alt="Image 4">
+                <div class="carousel-text">
+                    <h1>Creative expressions through paintings and photography.</h1>
+                    <button class="carousel-button" type="button">View Gallery</button>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="background-image2" id="HOME">
-        <img src="images/blue.png" id="img-bg">
-        pula 
+    <!-- SECTION 2 -->
+    <div class="section2">
+        <img src="images/night.png" alt="">
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
