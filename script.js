@@ -28,19 +28,23 @@ window.addEventListener("focus", () => {
 
 //!CAROUSEL\\
 
-let slideIndex = 0;
-const slides = document.getElementsByClassName("carousel-slide");
-const totalSlides = slides.length;
-const wrapper = document.querySelector(".carousel-wrapper");
-
-function showSlides() {
-  slideIndex = (slideIndex + 1) % totalSlides;
-
-  wrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
-
-  setTimeout(showSlides, 10000);
-}
-
 window.onload = function () {
-  showSlides();
+
+  setTimeout(function () {
+    let carouselIndex = 0;
+    const slides = document.querySelectorAll(".carousel-slide");
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      const carouselWrapper = document.querySelector(".carousel-wrapper");
+      carouselWrapper.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function startCarousel() {
+      carouselIndex = (carouselIndex + 1) % totalSlides;
+      showSlide(carouselIndex);
+    }
+
+    setInterval(startCarousel, 5000);
+  }, 10000);
 };
