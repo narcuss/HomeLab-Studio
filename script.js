@@ -46,5 +46,5 @@ window.onload = function () {
     }
 
     setInterval(startCarousel, 5000);
-  }, 10000);
+  }, 5000);
 };
