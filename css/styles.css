@@ -248,6 +248,32 @@ body {
   height: 100%;
 }
 
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  font-size: 28px;
+}
+
+button.prev {
+  left: 5em;
+}
+
+button.next {
+  right: 5em;
+}
+
+button.prev:hover,
+button.next:hover {
+  color: #ff004a;
+}
+
 /* SECTION 2 */
 .section2 img {
   display: block;

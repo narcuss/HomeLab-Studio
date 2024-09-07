@@ -28,23 +28,35 @@ window.addEventListener("focus", () => {
 
 //!CAROUSEL\\
 
-window.onload = function () {
+let carouselIndex = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+  const totalSlides = slides.length;
+  let autoSlideInterval;
 
-  setTimeout(function () {
-    let carouselIndex = 0;
-    const slides = document.querySelectorAll(".carousel-slide");
-    const totalSlides = slides.length;
+  function showSlide(index) {
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
+    carouselWrapper.style.transform = `translateX(-${index * 100}%)`;
+  }
 
-    function showSlide(index) {
-      const carouselWrapper = document.querySelector(".carousel-wrapper");
-      carouselWrapper.style.transform = `translateX(-${index * 100}%)`;
-    }
+  function moveSlide(step) {
+    carouselIndex = (carouselIndex + step + totalSlides) % totalSlides;
+    showSlide(carouselIndex);
+    resetAutoSlide();
+  }
 
-    function startCarousel() {
-      carouselIndex = (carouselIndex + 1) % totalSlides;
-      showSlide(carouselIndex);
-    }
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(function() {
+      moveSlide(1);
+    }, 5000);
+  }
 
-    setInterval(startCarousel, 5000);
-  }, 5000);
-};
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide(); 
+  }
+  
+  window.onload = function() {
+    setTimeout(function() {
+      startAutoSlide();
+    }, 5000);
+  };
