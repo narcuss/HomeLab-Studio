@@ -5,7 +5,12 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
+  min-width: 100vh;
   font-family: "Montserrat";
   background-color: black;
 }
@@ -26,11 +31,11 @@ body {
 }
 
 .navbar.opaque {
-  background-color: rgb(0, 0, 0);
+  background-color: #04000a;
 }
 
 .navbar.opaque .dropbtn {
-  color: rgb(255, 255, 255);
+  color: rgb(252, 252, 252);
 }
 
 .navbar.opaque a {
@@ -40,7 +45,7 @@ body {
 .navbar-links {
   gap: 3rem;
   display: flex;
-  font-size: 17px;
+  font-size: 16px;
   z-index: 99;
   margin-right: 2em;
 }
@@ -54,13 +59,13 @@ body {
 .image-button {
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .image-button img {
   margin-right: 10px;
-  width: 55px;
-  height: 55px;
+  width: 70px;
+  height: 70px;
 }
 
 .dropdown button,
@@ -86,7 +91,7 @@ body {
 }
 
 .navbar-links:hover,
-.dropdown:hover .dropbtn{
+.dropdown:hover .dropbtn {
   color: #ff004a;
 }
 
@@ -99,7 +104,7 @@ body {
   border-top: 3px solid rgb(90, 0, 255);
   display: none;
   position: absolute;
-  background-color: rgb(0, 0, 0);
+  background-color: #04000a;
   min-width: auto;
   box-shadow: 1px 5px 14px 5px rgba(0, 0, 0, 0.2);
   z-index: 2;
@@ -118,11 +123,9 @@ body {
   color: rgb(90, 0, 255);
 }
 
-.dropdown:hover
-.dropdown-content{
+.dropdown:hover .dropdown-content {
   display: block;
 }
-
 
 /* SECTION 1 */
 .carousel-container {
@@ -151,12 +154,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 57.5em;
+  height: 91.5em;
   object-fit: cover;
 }
 
 .carousel-text {
-  font-size: 1.2em;
+  font-size: 1.8em;
   text-align: center;
   position: absolute;
   color: white;
@@ -253,12 +256,88 @@ button.next:hover {
   color: #ff004a;
 }
 
-/* SECTION 2 */
-.section2 img {
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 57em;
-  object-fit: cover;
+.divBtn{
+  border: 3px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bolder;
+  font-family: "Ubuntu";
+  margin: 2em 20em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 15px;
+  letter-spacing: 2px;
 }
+
+.divBtn:hover {
+  background-color: #ffffff;
+  color: black;
+  font-weight: bolder;
+  font-family: "Ubuntu";
+  transition: 0.4s;
+}
+
+/* SECTION 2 */
+.secondDiv,
+.thirdDiv,
+.forthDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+}
+
+.secondDiv-box,
+.thirdDiv-box,
+.forthDiv-box {
+  flex-direction: column;
+}
+
+.secondDiv-info,
+.thirdDiv-info,
+.forthDiv-info {
+  font-size: 2em;
+  margin: 0 5em;
+}
+
+.secondDiv-info h1,
+.thirdDiv-info h1,
+.forthDiv-info h1 {
+  font-family: "Nasalization";
+  margin-bottom: 70px;
+}
+
+.secondDiv-photo,
+.thirdDiv-photo,
+.forthDiv-photo {
+  padding: 10em;
+  max-width: 100%;
+}
+
+.secondDiv-photo img,
+.thirdDiv-photo img,
+.forthDiv-photo img {
+  transform: rotate(10deg);
+  width: 55em;
+  height: 55em;
+}
+
+/* SECTION 3 */
+.thirdDiv {
+  background-color: rgb(26, 26, 26);
+}
+
+/* SECTION 4 */
+.forthDiv {
+  background-color: rgb(0, 0, 0);
+}
+
+
